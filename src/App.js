@@ -6,7 +6,7 @@ class App extends Component {
     return (
       <div>
         <h1>BookClub</h1>
-        <td>BookListEntry
+        <p><BookListEntry book={this.props.books[0]}/></p>
       </div>
     );
   }
@@ -14,16 +14,10 @@ class App extends Component {
 
 class BookListEntry extends Component {
   render() {
-    var bookListItem = this.props.books.map(function(book) {
-      return (
-        <li>
-          "{book.name + book.title + book.rating}"
-        </li>
-      )
-    })
     return (
       <tr>
-        <td>{bookListItem}</td>
+        <td>{this.props.book.author}</td>
+        <td>{this.props.book.title}</td>
       </tr>
     )
   }
