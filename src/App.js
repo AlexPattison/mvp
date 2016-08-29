@@ -4,7 +4,10 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <h1>BookClub</h1>
+      <div>
+        <h1>BookClub</h1>
+        <td>BookListEntry
+      </div>
     );
   }
 }
@@ -20,9 +23,7 @@ class BookListEntry extends Component {
     })
     return (
       <tr>
-        <td>{name}</td>
-        <td>{author}</td>
-        <td>{rating}</td>
+        <td>{bookListItem}</td>
       </tr>
     )
   }
