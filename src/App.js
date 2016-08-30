@@ -21,20 +21,12 @@ const Booklist = (props) => (
   </table>
 )
 
-// const BookListEntry({author, title, rating})
-
-class BookListEntry extends Component {
-  render() {
-    return (
-      <tr class='book'>
-        <td>{this.props.book.author}</td>
-        <td>{this.props.book.title}</td>
-        <td>{this.props.book.rating}</td>
-      </tr>
-    )
-  }
-}
-
-
+const BookListEntry = (props) => (
+  <tr>
+    <td>{props.book.author}</td>
+    <td>{props.book.title}</td>
+    <td>{props.book.rating}</td>
+  </tr>
+)
 
 export default App;
