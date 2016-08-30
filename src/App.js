@@ -15,9 +15,22 @@ class App extends Component {
 class BookListEntry extends Component {
   render() {
     return (
+        // {props.books.map(function(book) {
+        //   return (
+        //     <tr>
+        //       <td>{book.title}</td>
+        //       <td>{book.author}</td>
+        //       <td>{book.rating}</td>
+        //     </tr>
+        //   )
+        // })}
+
+
+
       <tr>
         <td>{this.props.book.author}</td>
         <td>{this.props.book.title}</td>
+        <td>{this.props.book.rating}</td>
       </tr>
     )
   }
