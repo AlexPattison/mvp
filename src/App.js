@@ -6,10 +6,20 @@ class App extends Component {
     return (
       <div>
         <h1>BookClub</h1>
-        <p><BookListEntry book={this.props.books[0]}/></p>
+        {this.getBookList()}
       </div>
     );
   }
+
+  getBookList() {
+    return this.props.books.map(function(book) {
+      return <tr><BookListEntry book={book} /></tr>
+    })
+  }
+}
+
+class BookList extends Component {
+
 }
 
 class BookListEntry extends Component {
