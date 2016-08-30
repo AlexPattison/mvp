@@ -6,38 +6,39 @@ class App extends Component {
     return (
       <div>
         <h1>BookClub</h1>
-        {this.getBookList()}
+        {/* {this.getBookList()} */}
+        <Booklist books={this.props.books} />
       </div>
     );
   }
 
-  getBookList() {
-    return this.props.books.map(function(book) {
-      return <tr><BookListEntry book={book} /></tr>
-    })
-  }
+  // getBookList() {
+  //   return (
+  //     <table>
+  //       <tbody>
+  //         {this.props.books.map(function(book) {
+  //           return <BookListEntry book={book} />})}
+  //       </tbody>
+  //     </table>
+  //   )
+  // }
 }
 
-class BookList extends Component {
+const Booklist = (props) => (
+  <table>
+    <tbody>
+      {props.books.map(function(book) {
+        return <BookListEntry book={book} />})}
+    </tbody>
+  </table>
+)
 
-}
+// const BookListEntry({author, title, rating})
 
 class BookListEntry extends Component {
   render() {
     return (
-        // {props.books.map(function(book) {
-        //   return (
-        //     <tr>
-        //       <td>{book.title}</td>
-        //       <td>{book.author}</td>
-        //       <td>{book.rating}</td>
-        //     </tr>
-        //   )
-        // })}
-
-
-
-      <tr>
+      <tr class='book'>
         <td>{this.props.book.author}</td>
         <td>{this.props.book.title}</td>
         <td>{this.props.book.rating}</td>
